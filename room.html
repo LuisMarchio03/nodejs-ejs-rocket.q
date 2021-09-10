@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/room.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
 
     <title>Rocket.Q - Perguntas e Respostas</title>
   </head>
@@ -130,20 +131,22 @@
     <!-- MODAL -->
     <div class="modal-wrapper">
       <div class="modal">
-        <h2>Excluir</h2>
+        <h2>Excluir pergunta</h2>
         <p>Tem, certeza que você deseja excluir esta pergunta?</p>
-        <form action="">
-          <label class="sr-only" for-id="password">Digite a senha admin</label>
+        <form action="#">
+          <label class="sr-only" for-id="password"
+            >Digite a senha de admin</label
+          >
           <input
             type="password"
             name="password"
             id="password"
-            placeholder="Digite a senha admin"
+            placeholder="Digite a senha de admin"
           />
 
           <div class="buttons">
-            <div class="button">Cancelar</div>
-            <button>Sim, excluir</button>
+            <div class="button grey">Cancelar</div>
+            <button class="red">Sim, excluir</button>
           </div>
         </form>
       </div>
