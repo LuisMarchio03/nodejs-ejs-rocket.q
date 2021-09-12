@@ -1,27 +1,22 @@
 {
-  "name": "roquet.q",
+  "name": "Rocket.Q",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon src/server.js",
-    "init-db": "node --trace-warnings src/db/init.js"
+    "init-db": "node src/db/init.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LuisMarchio03/rocket.q.git"
-  },
-  "author": "Luís Gabriel Marchió Batista",
+  "keywords": [],
+  "author": "Luís Gabriel Marchio Batista",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LuisMarchio03/rocket.q/issues"
-  },
-  "homepage": "https://github.com/LuisMarchio03/rocket.q#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

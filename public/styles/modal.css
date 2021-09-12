@@ -6,7 +6,7 @@
 .modal-wrapper {
   position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   display: flex;
@@ -20,9 +20,9 @@
 .modal-wrapper .modal {
   width: min(59rem, 90%);
   background: var(--white);
-  border-radius: 0.8rem;
-
   margin: auto;
+
+  border-radius: 0.8rem;
 
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -43,15 +43,11 @@
 }
 
 .modal-wrapper .modal input {
-  width: min(30.2rem, 70%);
-
   margin-bottom: 4rem;
   padding: 1.3rem 1.6rem;
-
   border: 0.2rem solid var(--blue);
-  border-radius: 0.8rem;
-
   outline: none;
+  width: min(70%, 30.2rem);
 }
 
 .modal-wrapper .modal .buttons {

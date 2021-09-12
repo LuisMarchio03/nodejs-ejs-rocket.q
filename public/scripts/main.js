@@ -6,28 +6,24 @@ const modalTitle = document.querySelector(".modal h2");
 const modalDescription = document.querySelector(".modal p");
 const modalButton = document.querySelector(".modal button");
 
-//? Button Check
-
+//Pegar todos os botões que existe com a classe check
 const checkButtons = document.querySelectorAll(".actions a.check");
 
 checkButtons.forEach((button) => {
-  //add addEventListener
+  //adicionar a escuta
   button.addEventListener("click", handleClick);
 });
 
-//? Button delete
-
+/*Quando o botão delete for clicado ele abre a modal */
 const deleteButton = document.querySelectorAll(".actions a.delete");
 
 deleteButton.forEach((button) => {
-  //add addEventListener
   button.addEventListener("click", (event) => handleClick(event, false));
 });
 
-//? HandleClick
-
 function handleClick(event, check = true) {
-  // Modal Form
+  event.preventDefault();
+  const text = check ? "Marcar como lida" : "Excluir";
   const slug = check ? "check" : "delete";
   const roomId = document.querySelector("#room-id").dataset.id;
   const questionId = event.target.dataset.id;
@@ -35,18 +31,13 @@ function handleClick(event, check = true) {
   const form = document.querySelector(".modal form");
   form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`);
 
-  //Modal title - description - button
-  modalTitle.innerHTML = check
-    ? "Marcar como lida esta pergunta"
-    : "Exluir esta pergunta";
-  modalDescription.innerHTML = check
-    ? "Tem certeza que deseja marcar como lida esta pergunta?"
-    : "Tem certeza que deseja excluir esta pergunta?";
-  modalButton.innerHTML = check ? "Sim, marcar como lida" : "Sim, Excluir";
+  modalTitle.innerHTML = `${text} esta pergunta`;
+  modalDescription.innerHTML = `Tem certeza que deseja ${text.toLowerCase()} esta pergunta?`;
+  modalButton.innerHTML = `Sim, ${text.toLowerCase()}`;
   check
     ? modalButton.classList.remove("red")
     : modalButton.classList.add("red");
 
-  //Modal Open()
+  //abrir modal
   modal.open();
 }
