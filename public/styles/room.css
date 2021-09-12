@@ -19,25 +19,22 @@
   padding: 1.3rem 1.6rem;
 }
 
-#room header .buttons .button:nth-child(1) > img {
+#room header .buttons .button:nth-child(1) img {
+  margin-left: 1rem;
   width: 2rem;
   height: 2rem;
-
-  margin-left: 1rem;
 }
 
 #room header .buttons .button:nth-child(2) {
   padding: 1.3rem 3.2rem;
 }
 
-#room header .buttons .button:nth-child(2) > img {
+#room header .buttons .button:nth-child(2) img {
   width: 2rem;
   height: 2rem;
-
-  margin-right: 1rem;
 }
 
-/*** Question Form ***/
+/*** QUESTION FORM ***/
 #question-form h2 {
   font-family: "Poppins", sans-serif;
   font-size: 2.8rem;
@@ -57,9 +54,11 @@
 }
 
 #question-form form textarea {
-  width: 100%;
-  background: transparent;
   resize: none;
+  background: transparent;
+
+  width: 100%;
+
   outline: none;
 }
 
@@ -74,17 +73,16 @@
 }
 
 #question-form form footer > div {
+  display: flex;
+  align-items: center;
+
   color: var(--icons-details);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
-
-  display: flex;
-  align-items: center;
-  margin: 0 0.9rem;
 }
 
-#question-form form footer > div > img {
+#question-form form footer > div img {
   margin-right: 0.9rem;
 }
 
@@ -94,7 +92,7 @@
   line-height: 2.4rem;
 }
 
-/*** Question ***/
+/******* Questions *****/
 .question-wrapper {
   background: var(--light-blue);
   margin-bottom: 0.8rem;
@@ -136,16 +134,37 @@
   margin-right: 0.8rem;
 }
 
-/* .question-wrapper .actions > a:nth-child(2) {} */
 .question-wrapper .actions > a + a {
   margin-left: 2.4rem;
 }
 
-/*** Question Read ***/
+/***** Question Read ****/
 .question-wrapper.read {
   background: var(--grey-medium);
 }
 
 .question-wrapper.read .question-content .user {
   background: var(--grey-blue);
+}
+
+/*** No Questions   **/
+.no-questions {
+  text-align: center;
+  margin-top: 5.2rem;
+}
+.no-questions img {
+  max-width: 100%;
+  margin-bottom: 1.2rem;
+}
+.no-questions p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.no-questions p + p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 1.3rem;
+  line-height: 1.9rem;
 }

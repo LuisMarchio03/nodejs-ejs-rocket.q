@@ -11,28 +11,28 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/room.css" />
-    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/room.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
 
     <!-- Scripts -->
-    <script src="scripts/main.js" defer type="module"></script>
+    <script src="/scripts/main.js" defer type="module"></script>
 
     <title>Rocket.Q - Perguntas e Respostas</title>
   </head>
   <body>
     <div id="room" class="content">
       <header>
-        <a href="#">
-          <img src="assets/logo.svg" alt="Rocket.Q Logo" />
+        <a href="/">
+          <img src="/assets/logo.svg" alt="Rocket.Q Logo" />
         </a>
         <div class="buttons">
-          <div class="button outlined">
+          <div class="button outlined" id="room-id" data-id="323243">
             #323243
-            <img src="assets/copy.svg" alt="Copiar número da sala" />
+            <img src="/assets/copy.svg" alt="Copiar número da sala" />
           </div>
           <a href="#" class="button">
-            <img src="assets/users-white.svg" alt="Criar uma sala" />
+            <img src="/assets/users-white.svg" alt="Criar uma sala" />
             Criar sala
           </a>
         </div>
@@ -52,7 +52,7 @@
 
             <footer>
               <div>
-                <img src="assets/lock.svg" alt="Cadeado" />
+                <img src="/assets/lock.svg" alt="Cadeado" />
                 Esta pergunta é anônima
               </div>
               <button>Enviar</button>
@@ -66,19 +66,19 @@
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
-                  <img src="assets/user.svg" alt="Avatar" />
+                  <img src="/assets/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>Qual a diferença entre const, var e let no javascript</p>
                 </div>
               </div>
               <div class="actions">
-                <a href="#" class="check">
-                  <img src="assets/check.svg" alt="Marcar com lida" />
+                <a href="#" class="check" data-id="2">
+                  <img src="/assets/check.svg" alt="Marcar com lida" />
                   Marcar com lida
                 </a>
-                <a href="#" class="delete">
-                  <img src="assets/trash.svg" alt="Excluir Pergunta" />
+                <a href="#" class="delete" data-id="2">
+                  <img src="/assets/trash.svg" alt="Excluir Pergunta" />
                   Excluir
                 </a>
               </div>
@@ -87,19 +87,19 @@
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
-                  <img src="assets/user.svg" alt="Avatar" />
+                  <img src="/assets/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>O que é Javascript?</p>
                 </div>
               </div>
               <div class="actions">
-                <a href="#" class="check">
-                  <img src="assets/check.svg" alt="Marcar com lida" />
+                <a href="#" class="check" data-id="3">
+                  <img src="/assets/check.svg" alt="Marcar com lida" />
                   Marcar com lida
                 </a>
-                <a href="#" class="delete">
-                  <img src="assets/trash.svg" alt="Excluir Pergunta" />
+                <a href="#" class="delete" data-id="3">
+                  <img src="/assets/trash.svg" alt="Excluir Pergunta" />
                   Excluir
                 </a>
               </div>
@@ -108,7 +108,7 @@
             <div class="question-wrapper read">
               <div class="question-content">
                 <div class="user">
-                  <img src="assets/user.svg" alt="Avatar" />
+                  <img src="/assets/user.svg" alt="Avatar" />
                 </div>
                 <div class="question">
                   <p>O que é Typescript</p>
@@ -119,8 +119,8 @@
                   <img src="assets/check.svg" alt="Marcar com lida" />
                   Marcar com lida
                 </a> -->
-                <a href="#" class="delete">
-                  <img src="assets/trash.svg" alt="Excluir Pergunta" />
+                <a href="#" class="delete" data-id="1">
+                  <img src="/assets/trash.svg" alt="Excluir Pergunta" />
                   Excluir
                 </a>
               </div>
@@ -134,17 +134,18 @@
     <!-- MODAL -->
     <div class="modal-wrapper">
       <div class="modal">
-        <h2>Excluir pergunta</h2>
-        <p>Tem, certeza que você deseja excluir esta pergunta?</p>
-        <form action="#">
+        <h2>Excluir Pergunta</h2>
+        <p>Tem certeza que você deseja excluir esta pergunta?</p>
+
+        <form action="#" method="POST">
           <label class="sr-only" for-id="password"
-            >Digite a senha de admin</label
+            >Digite sua senha admin</label
           >
           <input
             type="password"
-            name="password"
             id="password"
-            placeholder="Digite a senha de admin"
+            name="password"
+            placeholder="Digite sua senha"
           />
 
           <div class="buttons">
@@ -154,5 +155,6 @@
         </form>
       </div>
     </div>
+    <!-- Finished Modal -->
   </body>
 </html>
